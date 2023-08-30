@@ -29,6 +29,14 @@ form.button_to {
   display: inline;
 }
 
+.sold-out-badge {
+  background-color: red;
+  color: white;
+  padding: 5px;
+  border-radius: 5px;
+  text-align: center;
+}
+
 .hero {
   height: 75vh;
   background-image: url("/images/hero_header.jpg");
