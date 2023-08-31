@@ -1,0 +1,14 @@
+<h2>Categories</h2>
+
+<ul style="display: flex; flex-direction: column; justify-content: center;">
+  <% @categories.each do |category| %>
+    <li style="margin-bottom: .5em;">
+      <%= category.name %>
+      <span style="position: absolute; width: 5em; left: 30em;">
+      <%= link_to 'Delete', admin_category_path(category), method: :delete, data: { confirm: 'Are you sure?' }, class: 'btn btn-outline-danger badge rounded-pill' %>
+      </span>
+    </li>
+  <% end %>
+</ul>
+
+<h5><%= link_to '+ add new category', new_admin_category_path, class: 'btn btn-primary' %></h5>

@@ -6,6 +6,7 @@ Rails.application.routes.draw do
   resources :products, only: [:index, :show]
   resources :categories, only: [:show]
 
+  
   resources :users, only: [:new, :create]
 
   get 'login', to: 'sessions#new'
@@ -23,6 +24,7 @@ Rails.application.routes.draw do
   namespace :admin do
     root to: 'dashboard#show'
     resources :products, except: [:edit, :update, :show]
+    resources :categories, only: [:index, :new, :create, :destroy]
   end
 
   namespace :admin do
